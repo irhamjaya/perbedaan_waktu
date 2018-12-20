@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zona Waktu Dunia </title>
+</head>
+<body>
+    <center>
+    <ul style="list-style-type:none">      
+        <h1> JAM DUNIA </h1>
+        <h6 id="London"> ...</h6>
+        <h6 id="Paris"> ...</h6>
+        <h6 id="Istanbul"> ...</h6>
+        <h6 id="Moskow"> ...</h6>
+        <h6 id="UEA"> ...</h6>
+        <h6 id="Islamabad"> ...</h6>
+        <h6 id="Astana"> ...</h6>
+        <h6 id="Jakarta"> ...</h6>
+        <h6 id="Beijing"> ...</h6>
+        <h6 id="Tokyo"> ...</h6>
+    </ul><br>
+    <h3> Selisih Antar Zona Waktu 1 Jam, 1 Menit, 1 Detik. </h3>
+  <script type="text/javascript">
+setInterval(()=>{
+        var x = new Date()
+        var jam = x.getHours()
+        var menit = x.getMinutes()
+        var detik = x.getSeconds()
+        var noljam =''
+        var nolmenit =''
+        var noldetik =''
+        if(jam<10){
+            noljam='0'
+        }if(menit<10){
+            nolmenit='0'
+        }if(detik<10){
+            noldetik='0'
+        }
+        var timeLdn =' '+noljam+(jam-7)+':'+nolmenit+(menit-7)+':'+noldetik+(detik-7)+'*'+'GMT+0 London, Inggris'
+        console.log(timeLdn)
+        document.getElementById("London").innerHTML = timeLdn
+        var timePrs =' '+noljam+(jam-6)+':'+nolmenit+(menit-6)+':'+noldetik+(detik-6)+'*'+'GMT+1 Paris, Prancis'
+        console.log(timePrs)
+        document.getElementById("Paris").innerHTML = timePrs
+        var timeIstan =' '+noljam+(jam-5)+':'+nolmenit+(menit-5)+':'+noldetik+(detik-5)+'*'+'GMT+2 Istanbul, Turki'
+        console.    log(timeIstan)
+        document.getElementById("Istanbul").innerHTML = timeIstan
+        var timeMsk =' '+noljam+(jam-4)+':'+nolmenit+(menit-4)+':'+noldetik+(detik-4)+'*'+'GMT+3 Moskow, Rusia'
+        console.log(timeMsk)
+        document.getElementById("Moskow").innerHTML = timeMsk
+        var timeAD =' '+noljam+(jam-3)+':'+nolmenit+(menit-3)+':'+noldetik+(detik-3)+'*'+'GMT+4 Abu Dhabi, UEA'
+        console.log(timeAD)
+        document.getElementById("UEA").innerHTML = timeAD
+        var timeIslm =' '+noljam+(jam-2)+':'+nolmenit+(menit-2)+':'+noldetik+(detik-2)+'*'+'GMT+5 Islamabad, Pakistan'
+        console.log(timeIslm)
+        document.getElementById("Islamabad").innerHTML = timeIslm
+        var timeAstana =' '+noljam+(jam-1)+':'+nolmenit+(menit-1)+':'+noldetik+(detik-1)+'*'+' GMT+6 Astana, Kazakhstan'
+        console.log(timeAstana)
+        document.getElementById("Astana").innerHTML = timeAstana
+        var timeJKt =' '+noljam+jam+':'+nolmenit+menit+':'+noldetik+detik+'*'+'GMT+7 Jakarta, Indonesia'
+        console.log(timeJKt)
+        document.getElementById("Jakarta").innerHTML = timeJKt
+        var timeBeijing =' '+noljam+(jam+1)+':'+nolmenit+(menit+1)+':'+noldetik+(detik+1)+'*'+' GMT+8 Beijing, China'
+        console.log(timeBeijing)
+        document.getElementById("Beijing").innerHTML = timeBeijing
+        var timeTokyo =' '+noljam+(jam+2)+':'+nolmenit+(menit+2)+':'+noldetik+(detik+2)+'*'+'GMT+9 Tokyo, Jepang'
+        console.log(timeTokyo)
+        document.getElementById("Tokyo").innerHTML = timeTokyo
+    },1000
+) 
+    
+    </script>
+  </center> 
+</body>
+</html> 
